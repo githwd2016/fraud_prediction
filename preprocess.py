@@ -317,4 +317,6 @@ if __name__ == '__main__':
     # get_padding_data('data/feature1_padding_5.csv')
     # get_rnn_json_data2('data/ICD_dataset_180716.csv', field=setting.FEATURE1_NEW, out_path='data/rnn_feature1_new.json')
     # get_rnn_json_data2('data/ICD_dataset_180716.csv', field=setting.FEATURE2_NEW, out_path='data/rnn_feature2_new.json')
-    get_rnn_json_data2('data/ICD_dataset_240918_1700.xlsx', field=setting.FEATURE1_NEW, out_path='data/rnn_feature1_new_240218.json')
+    get_rnn_json_data2('data/ICD_dataset_240918_1700.csv',
+                       field=setting.FEATURE1_NEW,
+                       out_path='data/rnn_feature1_240918_1700.json')

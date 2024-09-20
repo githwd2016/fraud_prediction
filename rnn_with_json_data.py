@@ -16,7 +16,7 @@ from evaluation import evaluation
 
 # hyper parameter
 tf.flags.DEFINE_string('gpu', '0', 'Choose which GPU to use.')
-tf.flags.DEFINE_string('input_file', 'data/rnn_feature1_new_240218.json', 'Input json file.')
+tf.flags.DEFINE_string('input_file', 'data/rnn_feature1_240918_1700.json', 'Input json file.')
 tf.flags.DEFINE_string('unit', 'gru', 'Type of RNN unit.')
 tf.flags.DEFINE_integer('emb', 200, 'Embedding size.')
 tf.flags.DEFINE_integer('hidden', 300, 'Hidden layer size.')
@@ -312,7 +312,7 @@ def main(_):
         print('Result({}): {}'.format(best_acc_loop, result))
         print('Test loss({}): {}'.format(best_loss_loop, best_test_loss))
         # save
-        with open('result/rnn/ICD_dataset_240218/{}_{}_{}_{}_{}.txt'.format(FLAGS.end + 1, FLAGS.layers, FLAGS.hidden,
+        with open('result/rnn/ICD_dataset_240918_1700/{}_{}_{}_{}_{}.txt'.format(FLAGS.end + 1, FLAGS.layers, FLAGS.hidden,
                                                                             FLAGS.keep, FLAGS.emb), 'w') as f:
             for i, j, k in zip(test_stkcd, true_y, best_pred_y):
                 f.write('{} {} {}\n'.format(i, j, k))
